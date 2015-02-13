@@ -1,7 +1,7 @@
 ---
 dependencies:
   - { role: geerlingguy.git }
-  - 'git+http://github.com/GetValkyrie/ansible-role-php.git,,getvalkyrie.php'
+  - 'git+http://github.com/GetValkyrie/ansible-role-php.git,,geerlingguy.php'
   - { role: geerlingguy.composer }
 
 galaxy_info:
