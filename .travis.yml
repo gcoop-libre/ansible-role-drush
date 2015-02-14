@@ -9,6 +9,10 @@ before_install:
   - sudo apt-get update -qq
   - sudo apt-get install curl
 
+notifications:
+  slack:
+    secure: "HaP5VCMXZOXuvyjwhwE7HzsBjI/yxO9cbzBPt6kWwNBUEHlydfsJyl+7xKtU4r+/xfFtQGnI5oDyeK6cMRdoje/iM6RBRbbFy+TlOQ8U3l2rx0euePYfyRt6m1PkGDyummxkcFLmGAZo9vRW3rgCZGkd69dW4nHulPW3taLYn/A="
+
 install:
   # Install Ansible from sources.
   - curl https://raw.githubusercontent.com/GetValkyrie/ansible-bootstrap/master/install-ansible.sh|sudo /bin/sh
