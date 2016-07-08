@@ -1,14 +1,15 @@
-# Ansible Role: Drush
-
-[![Build Status](https://travis-ci.org/GetValkyrie/ansible-role-drush.svg?branch=master)](https://travis-ci.org/GetValkyrie/ansible-role-drush)
+Drush
+=====
 
 Installs Drush, a command line shell and scripting interface for Drupal, on any Linux or UNIX system.
 
-## Requirements
+Requirements
+------------
 
 None.
 
-## Role Variables
+Role Variables
+--------------
 
 Available variables are listed below, along with default values (see `defaults/main.yml`):
 
@@ -22,7 +23,7 @@ The path where composer will be installed and available to your system. Should b
 
 This role also relies on the presence of the `composer_path` variable, which is used to run composer. This could be, simply, `composer` on your system (if composer is in your user's `$PATH`).
 
-    drush_version: master
+    drush_version: 7.x
 
 The version of Drush to install (examples: `master` for the bleeding edge, `7.x`, `6.x`, `6.2.0`).
 
@@ -30,24 +31,32 @@ The version of Drush to install (examples: `master` for the bleeding edge, `7.x`
 
 Whether to keep Drush up-to-date with the latest revision of the branch specified by `drush_version`.
 
-## Dependencies
+Dependencies
+------------
 
   - geerlingguy.git (Installs Git).
   - geerlingguy.php (Installs PHP).
   - geerlingguy.composer (Installs Composer).
 
-## Example Playbook
+Example Playbook
+----------------
 
     - hosts: servers
       roles:
-        - { role: geerlingguy.drush }
+        - geerlingguy.drush
 
 After the playbook runs, the `drush` command will be accessible from normal system accounts.
 
-## License
+License
+-------
 
 MIT / BSD
 
-## Author Information
+Author Information
+------------------
+
+This role was modified by [gcoop Cooperativa de Software Libre](http://gcoop.coop) in 2016.
 
 This role was created in 2014 by [Jeff Geerling](http://jeffgeerling.com/), author of [Ansible for DevOps](http://ansiblefordevops.com/).
+
+And later it was modified in 2014 by [Christopher Gervais](http://ergonlogic.com/), lead maintainer of the [Aegir Hosting System](http://www.aegirproject.org).
